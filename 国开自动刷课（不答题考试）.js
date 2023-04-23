@@ -242,13 +242,15 @@ function guokai(content = "脚本状态", html = false) {
                                 //     gk_pageback(2000);
                                 //     clearInterval(timeId);
                                 // }
-                                const elements = $('.attachment-operations a[tipsy-literal="下载"]');
+                                let elements = $('.attachment-operations a[tipsy-literal="下载"]');
+                                if (elements.length === 0) {
+                                    elements = $('.attachment-operations a[tipsy-literal="预览"]');
+                                }
                                 if (elements.length != 0) {
                                     for (let i = 0; i < elements.length; i++) {
                                         const item = elements[i];
                                         gk.info(`正在点击第${i + 1}个课件捏`);
                                         item.href = "javascript:void(0);";
-                                        item.target = "_self";
                                         $(item).attr("ng-href", item.href);
                                         item.click();
                                         if ((i + 1) === elements.length) {
