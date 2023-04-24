@@ -2,7 +2,7 @@
  * @Author: 白羽
  * @Date: 2023-04-21 14:32:53
  * @LastEditors: 白羽
- * @LastEditTime: 2023-04-23 12:56:22
+ * @LastEditTime: 2023-04-24 13:19:10
  * @FilePath: \lmsTech\README.md
  * @Description: 
 -->
@@ -21,9 +21,18 @@
 
 ## 如何安装？
 
+### 半自动（模拟鼠标操作进行刷课）
+
 [脚本猫](https://scriptcat.org/script-show-page/740/)
 
 [greasyfork](https://greasyfork.org/zh-CN/scripts/464459-%E5%9B%BD%E5%BC%80%E8%87%AA%E5%8A%A8%E5%88%B7%E8%AF%BE-%E4%B8%8D%E7%AD%94%E9%A2%98%E8%80%83%E8%AF%95)
+
+
+### 全自动 （直接调用API进行刷课）
+
+**参考了一个GitHub项目** [点我跳转](https://github.com/windfgg/TestPuppeteerSharp)
+
+
 
 ## 使用方法
 
