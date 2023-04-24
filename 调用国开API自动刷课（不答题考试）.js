@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name             调用国开API自动刷课（不答题考试）
 // @namespace        http://ibaiyu.top/
-// @version          1.0
+// @version          1.1.2
 // @description      调用国开API自动刷课（不答题考试） 支持自动访问线上链接、查看资料附件、观看视频、自动查看页面、自动参与发帖回帖。调用API接口实现！
 // @author           蜜桃加乌龙
 // @icon             data:image/png;base64,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
@@ -125,7 +125,7 @@ function LogHelper() {
                 padding: 0px 8px 12px 8px;
                 resize: vertical;
                 overflow: auto;
-                
+
             }
 
             script-panel-element .script-panel-body {
@@ -222,6 +222,12 @@ function LogHelper() {
                 background: rgba(0, 0, 0, 0.253);
                 box-shadow: inset006pxrgba(0, 0, 0, 0.3);
             }
+            .footer {
+                text-align: center;
+            }
+            .footer a {
+                text-decoration: none;
+            }
         </style>
         <div class="message-container"></div><header-element class="header" data-title="菜单栏-可拖动区域">
             <div class="profile" data-title="菜单栏（可拖动区域）">日志输出</div>
@@ -238,9 +244,10 @@ function LogHelper() {
                     </div>
                 </div>
             </script-panel-element></div>
-        <div class="footer"></div>
+        <div class="footer">
+            <a id="startTech" href="javascript:void(0);">点我开始</a>
+        </div>
     </container-element>
-
     `;
     $('body').append(el_text);
     this.container = document.querySelector('container-element');
@@ -272,9 +279,9 @@ function LogHelper() {
         const CompletedCourseData = StartCompletenessData;
         const CompletedCourseModels = CompletedCourseData.completed_result.completed.learning_activity;
         for (let CoursesModulesModel of CoursesModulesModels) {
-            let sleep = parseInt((Math.random() * (15 - 5) + 5) * 1000); // 取5000 - 15000之间的毫秒随机数
+            let sleep = parseInt((Math.random() * (15 - 8) + 8) * 1000); // 取8000 - 15000之间的毫秒随机数
             await new Promise(resolve => setTimeout(resolve, sleep));
-            Log.WriteHtmlLine(`=====课程模块：${CoursesModulesModel.name}(${CoursesModulesModel.id}) 随机延迟: ${sleep}毫秒 =====`, true);
+            Log.WriteHtmlLine(`==课程模块：${CoursesModulesModel.name}(${CoursesModulesModel.id}) 当前进度${StrartCompleteness}% 随机延迟: ${sleep}毫秒 ==`, true);
             // 日志输出
             const LearnActivitieData = await new Promise(resolve => $.get(`https://lms.ouchn.cn/api/course/${courseId}/all-activities?module_ids=[${CoursesModulesModel.id}]&activity_types=learning_activities,exams,classrooms`, (data, status, xhr) => status === "success" ? resolve(data) : { learning_activities: [] }));
             const { learning_activities: LearnActivitieModels } = LearnActivitieData;
@@ -286,7 +293,7 @@ function LogHelper() {
                         continue;
                     } else {
                         await new Promise(resolve => setTimeout(resolve, sleep));
-                        Log.WriteHtmlLine(`模块标题：${LearnActivitieModel.title}(${LearnActivitieModel.type}) 完成标准：${LearnActivitieModel.completion_criterion}(${LearnActivitieModel.id})`);
+                        Log.WriteHtmlLine(`模块标题：${LearnActivitieModel.title}(${LearnActivitieModel.type}) 完成标准：${LearnActivitieModel.completion_criterion}(${LearnActivitieModel.id}) 任务开始`);
                     }
                     if (completion_criterion === "查看页面") {
                         await new Promise(resolve => $.post(`https://lms.ouchn.cn/api/course/activities-read/${LearnActivitieModel.id}`, {}, resolve));
@@ -307,17 +314,18 @@ function LogHelper() {
                                 }),
                                 success: resolve
                             }));
-                            Log.WriteHtmlLine(`模块标题：${LearnActivitieModel.title}(${LearnActivitieModel.type}) ${LearnActivitieModel.completion_criterion} <span class="info">完成</span>`);
+                            Log.WriteHtmlLine(`模块标题：${LearnActivitieModel.title}(${LearnActivitieModel.type}) ${completion_criterion} <span class="info">完成</span>`);
                         } else {
-                            Log.WriteHtmlLine(`模块标题：${LearnActivitieModel.title}(${LearnActivitieModel.type}) ${LearnActivitieModel.completion_criterion} 不需要发帖 <span class="info">完成</span>`);
+                            Log.WriteHtmlLine(`模块标题：${LearnActivitieModel.title}(${LearnActivitieModel.type}) ${completion_criterion} 不需要发帖 <span class="info">完成</span>`);
                         }
                     } else if (completion_criterion === "访问线上链接") {
-                        Log.WriteHtmlLine(`模块标题：${LearnActivitieModel.title}(${LearnActivitieModel.type}) ${LearnActivitieModel.completion_criterion} <span class="info">完成</span>`);
+                        Log.WriteHtmlLine(`模块标题：${LearnActivitieModel.title}(${LearnActivitieModel.type}) ${completion_criterion} <span class="info">完成</span>`);
                         await new Promise(resolve => $.post(`https://lms.ouchn.cn/api/course/activities-read/${LearnActivitieModel.id}`, {}, resolve));
                     } else if (completion_criterion.indexOf("需累积观看") !== -1) {
                         for (let VideoUploadModel of LearnActivitieModel.uploads) {
                             await new Promise(resolve => $.post(`https://lms.ouchn.cn/api/course/activities-read/${LearnActivitieModel.id}`, {}, resolve)); // 第一次的请求默认为没有参数。
                             for (let item of VideoUploadModel.videos) {
+                                await new Promise(resolve => setTimeout(resolve, sleep));
                                 await new Promise(resolve => $.ajax({
                                     type: "POST",
                                     url: `https://lms.ouchn.cn/api/course/activities-read/${LearnActivitieModel.id}`,
@@ -326,8 +334,8 @@ function LogHelper() {
                                     data: JSON.stringify({ start: 0, end: item.duration }),
                                     success: resolve
                                 }));
-                                Log.WriteHtmlLine(`模块标题：${LearnActivitieModel.title}(${LearnActivitieModel.type}) ${LearnActivitieModel.completion_criterion} <span class="info">完成</span>`);
                             }
+                            Log.WriteHtmlLine(`模块标题：${LearnActivitieModel.title}(${LearnActivitieModel.type}) ${completion_criterion} <span class="info">完成</span>`);
                         }
                     } else if (completion_criterion.indexOf("参考资料附件") !== -1) {
                         for (let uploadModel of LearnActivitieModel.uploads) {
@@ -339,14 +347,14 @@ function LogHelper() {
                                 data: JSON.stringify({ upload_id: uploadModel.id }),
                                 success: resolve
                             }));
-                            Log.WriteHtmlLine(`模块标题：${LearnActivitieModel.title}(${LearnActivitieModel.type}) ${LearnActivitieModel.completion_criterion} <span class="info">完成</span>`);
+                            Log.WriteHtmlLine(`模块标题：${LearnActivitieModel.title}(${LearnActivitieModel.type}) ${completion_criterion} <span class="info">完成</span>`);
                         }
                     } else {
-                        Log.WriteHtmlLine(`模块标题：${LearnActivitieModel.title}(${LearnActivitieModel.type})完成标准：${LearnActivitieModel.completion_criterion}<span class="warn">未完成</span>`);
+                        Log.WriteHtmlLine(`模块标题：${LearnActivitieModel.title}(${LearnActivitieModel.type})完成标准：${completion_criterion == undefined || completion_criterion == "" ? "无" : completion_criterion} <span class="warn">未完成</span>`);
                     }
                 }
             } catch (error) {
-                Log.WriteHtmlLine("代码出现了异常 按F12在控制台查看错误。");
+                Log.WriteHtmlLine(`<span class="error">代码出现了异常 按F12在控制台查看错误。</span>`);
                 console.error(error);
                 await new Promise(resolve => setTimeout(resolve, sleep));
             }
@@ -357,6 +365,11 @@ function LogHelper() {
         const EndTime = performance.now(); // 代码结束时间
         Log.WriteHtmlLine(`学习前进度:${StrartCompleteness}% 学习后进度:${EndCompleteness}% 耗时: ${((EndTime - StartTime) / 1000).toFixed(2)}秒`);
     }
-    const courseId = document.querySelector("#courseId").value;
-    LearnCourseId(courseId);
+    document.querySelector('#startTech').addEventListener('click', function () {
+        const courseId = document.querySelector("#courseId").value;
+        LearnCourseId(courseId);
+        this.onclick = null;
+        this.style.cursor = "no-drop";
+        this.style.color = "#ccc";
+    })
 })();
