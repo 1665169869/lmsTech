@@ -2,7 +2,7 @@
  * @Author: 白羽
  * @Date: 2023-04-21 14:32:53
  * @LastEditors: 白羽
- * @LastEditTime: 2023-04-24 13:19:10
+ * @LastEditTime: 2023-04-24 13:20:26
  * @FilePath: \lmsTech\README.md
  * @Description: 
 -->
@@ -32,6 +32,7 @@
 
 **参考了一个GitHub项目** [点我跳转](https://github.com/windfgg/TestPuppeteerSharp)
 
+[脚本猫](https://scriptcat.org/script-show-page/986/)
 
 
 ## 使用方法

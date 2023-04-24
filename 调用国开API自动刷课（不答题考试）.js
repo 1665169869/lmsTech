@@ -8,9 +8,9 @@
 // @include          *://lms.ouchn.cn/course/*
 // @original-author  蜜桃加乌龙
 // @original-license GPL-3.0
-// @original-script  https://scriptcat.org/script-show-page/740
+// @original-script  https://scriptcat.org/script-show-page/986/
 // @license          GPL-3.0
-// @source           https://scriptcat.org/script-show-page/740
+// @source           https://scriptcat.org/script-show-page/986/
 // ==/UserScript==
 function LogHelper() {
     const el_text = `
