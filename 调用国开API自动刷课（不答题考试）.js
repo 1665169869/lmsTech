@@ -293,7 +293,7 @@ function LogHelper() {
                         continue;
                     } else {
                         await new Promise(resolve => setTimeout(resolve, sleep));
-                        Log.WriteHtmlLine(`模块标题：${LearnActivitieModel.title}(${LearnActivitieModel.type}) 完成标准：${LearnActivitieModel.completion_criterion}(${LearnActivitieModel.id})`);
+                        Log.WriteHtmlLine(`模块标题：${LearnActivitieModel.title}(${LearnActivitieModel.type}) 完成标准：${LearnActivitieModel.completion_criterion}(${LearnActivitieModel.id}) 任务开始`);
                     }
                     if (completion_criterion === "查看页面") {
                         await new Promise(resolve => $.post(`https://lms.ouchn.cn/api/course/activities-read/${LearnActivitieModel.id}`, {}, resolve));
