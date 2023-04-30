@@ -1,8 +1,8 @@
 <!--
  * @Author: 白羽
  * @Date: 2023-04-21 14:32:53
- * @LastEditors: 白羽
- * @LastEditTime: 2023-04-24 13:20:26
+ * @LastEditors: error: git config user.name & please set dead value or install git
+ * @LastEditTime: 2023-04-30 12:00:03
  * @FilePath: \lmsTech\README.md
  * @Description: 
 -->
@@ -30,8 +30,6 @@
 
 [greasyfork](https://greasyfork.org/zh-CN/scripts/464459-%E5%9B%BD%E5%BC%80%E8%87%AA%E5%8A%A8%E5%88%B7%E8%AF%BE-%E4%B8%8D%E7%AD%94%E9%A2%98%E8%80%83%E8%AF%95)
 
-*ps:半自动脚本有BUG，可能会停止更新半自动脚本，建议转移至全自动脚本。*
-
 ### 全自动 （直接调用API进行刷课）
 
 *参考了一个GitHub项目 [点我跳转](https://github.com/windfgg/TestPuppeteerSharp)*
@@ -58,9 +56,9 @@
 
 ### 作者的话
 
-目前已经修复多个课程附件不会完成任务的BUG
+在1.5.0版本中重构了整个代码，使得代码阅读更容易了。
 
-目前发现半自动脚本多个课程附件会无法完成任务的BUG（没有技术修复）
+并且课程附件任务直接采用了调用API发送已阅读的请求来完成任务。
 
 目前无法知道是否有多个外部链接的任务，如果有麻烦来人反馈下。
 
