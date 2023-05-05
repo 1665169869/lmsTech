@@ -1,9 +1,10 @@
 // ==UserScript==
 // @name             国开自动刷课（不答题考试）
 // @namespace        http://ibaiyu.top/
-// @version          1.5.4
+// @version          1.5.5
 // @description      国开（国家开放大学）自动刷课（不答题考试） 支持自动访问线上链接、查看资料附件、观看视频、自动查看页面、自动参与发帖回帖。
 // @note             1.5.4: 优化了下代码，并让它更加易读了。同时修复了发帖的时候轮询没被clear的问题。
+// @note             1.5.5：修复了视频/音频不会播放的问题 修复了查看页面任务类型不会返回的问题 修复了课程附件的问题
 // @author           蜜桃加乌龙
 // @icon             data:image/png;base64,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
 // @match          *://lms.ouchn.cn/course/*
@@ -12,14 +13,12 @@
 // @original-script  https://scriptcat.org/script-show-page/740
 // @license          GPL-3.0
 // @source           https://scriptcat.org/script-show-page/740
-// @grant            GM_info
-// @grant            GM_getValue
-// @grant            GM_setValue
 // ==/UserScript==
 
 
 // 设置视频播放速度 建议最大4-8倍速 不然可能会卡 没有最大值
-const playbackRate = 2;
+// 并且直接挂载到window上
+window.playbackRate = 2;
 
 // 设置各种不同类型的课程任务之间的时间延迟，以便脚本在进行自动化学习时可以更好地模拟人类操作。
 const interval = {
@@ -32,16 +31,36 @@ const interval = {
     other: 3000 // 处理其他未知类型课程的延迟时间
 };
 
-(function (window, document) {
+(async function (window, document) {
+
+    // 使用正则表达式从当前 URL 中提取出课程 ID。
+    const courseId = (await waitForElement("#courseId", interval.loadCourse)).value;
+
     // 运行
     main();
 
-    // 使用正则表达式从当前 URL 中提取出课程 ID。
-    const courseId = document.URL.match(/https:\/\/lms.ouchn.cn\/course\/(\d+)\//)[1];
+    // 保存值到本地存储
+    function GM_setValue(name, value) {
+        localStorage.setItem(name, JSON.stringify(value));
+    }
+
+    //从本地存储获取值
+    function GM_getValue(name, defaultValue) {
+        const value = localStorage.getItem(name);
+        if (value === null) {
+            return defaultValue;
+        }
+        try {
+            return JSON.parse(value);
+        } catch (e) {
+            console.error(`Error parsing stored value for ${name}:`, e);
+            return defaultValue;
+        }
+    }
 
     // 创建返回到课程列表页面的函数。
-    function returnCoursePage() {
-        document.querySelector(".return-link > a").click();
+    async function returnCoursePage(waitTime = 500) {
+        (await waitForElement(".return-link > a", waitTime))?.click();
     }
 
     // 将中文类型名称转换为英文枚举值。
@@ -106,16 +125,12 @@ const interval = {
     // 打开并播放在线视频课程。
     async function openOnlineVideo() {
         // 等待 video 或 audio 元素加载完成
-        const [videoElem, audioElem] = await new Promise(resolve => {
-            let timeId = setInterval(() => {
-                const video = document.querySelector("video");
-                const audio = document.querySelector("audio");
-                if (video || audio) {
-                    clearInterval(timeId);
-                    resolve([video, audio]);
-                };
-            }, interval.onlineVideo);
-        });
+        const videoElem = await waitForElement('video');
+        let audioElem = null;
+
+        if (!videoElem) {
+            audioElem = await waitForElement('audio');
+        }
 
         if (videoElem) {
             // 处理视频元素
@@ -136,9 +151,8 @@ const interval = {
             await wait(interval.onlineVideo);
 
             // // 每隔一段时间检查是否暂停，并模拟点击继续播放并设置声音音量为0
-            elementVideo.volume = 0;
             setInterval(() => {
-                elementVideo.volume = 0;
+                videoElem.volume = 0;
                 if (document.querySelector("i.mvp-fonts.mvp-fonts-play")) {
                     document.querySelector("i.mvp-fonts.mvp-fonts-play").click();
                 }
@@ -156,7 +170,7 @@ const interval = {
 
             // 每隔一段时间检查是否暂停，并模拟点击继续播放
             setInterval(() => {
-                elementAudio.volume = 0;
+                audioElem.volume = 0;
                 if (document.querySelector("i.font.font-audio-play")) {
                     document.querySelector("i.font.font-audio-play").click();
                 }
@@ -167,11 +181,7 @@ const interval = {
     // 打开并查看页面类型课程。
     function openViewPage() {
         // 当页面被加载完毕后延迟一会直接返回课程首页
-        document.addEventListener('readystatechange', () => {
-            if (document.readyState == 'complete') {
-                setTimeout(returnCoursePage, interval.viewPage);
-            }
-        })
+        setTimeout(returnCoursePage, interval.viewPage);
     }
 
     // 打开并点击线上链接类型课程。
@@ -189,28 +199,34 @@ const interval = {
     }
     function openApiMaterial() { // 用API去完成查看附件
         const id = document.URL.match(/.*\/\/lms.ouchn.cn\/course\/[0-9]+\/learning-activity\/full-screen.+\/([0-9]+)/)[1];
-        new Promise((resolve, reject) => {
+        const res = new Promise((resolve, reject) => {
             $.ajax({
                 url: `https://lms.ouchn.cn/api/activities/${id}`,
                 type: "GET",
                 success: resolve,
                 error: reject
             })
-        }).then(({ uploadsModels }) => {
-            uploadsModels.forEach(async ({ uploadId }) => {
-                await new Promise(resolve => setTimeout(resolve, interval.material));
+        });
+        res.then(async ({ uploads: uploadsModels }) => {
+            uploadsModels.forEach(async ({ id: uploadId }) => {
+                await wait(interval.material);
                 await new Promise(resolve => $.ajax({
-                    url: `https://lms.ouchn.cn/api/course/activities-read/${uploadId}`,
+                    url: `https://lms.ouchn.cn/api/course/activities-read/${id}`,
                     type: "POST",
+                    data: JSON.stringify({ upload_id: uploadId }),
                     contentType: "application/json",
                     dataType: "JSON",
                     success: resolve,
                     error: resolve
                 }));
             });
-        }).catch((xhr, status, error) => {
+
+            await wait(interval.material);
+            returnCoursePage();
+        });
+        res.catch((xhr, status, error) => {
             console.log(`这里出现了一个异常 | status: ${status}`);
-            console.error(error);
+            console.dir(error, xhr, status);
         });
 
     }
