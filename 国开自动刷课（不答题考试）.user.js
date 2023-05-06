@@ -4,7 +4,8 @@
 // @version          1.5.5
 // @description      国开（国家开放大学）自动刷课（不答题考试） 支持自动访问线上链接、查看资料附件、观看视频、自动查看页面、自动参与发帖回帖。
 // @note             1.5.4: 优化了下代码，并让它更加易读了。同时修复了发帖的时候轮询没被clear的问题。
-// @note             1.5.5：修复了视频/音频不会播放的问题 修复了查看页面任务类型不会返回的问题 修复了课程附件的问题
+// @note             1.5.5: 修复了视频/音频不会播放的问题 修复了查看页面任务类型不会返回的问题 修复了课程附件的问题
+// @note             1.5.6: 优化了获取课程任务的代码，并且查询dom元素存在的函数添加了个maxCount参数
 // @author           蜜桃加乌龙
 // @icon             data:image/png;base64,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
 // @match          *://lms.ouchn.cn/course/*
@@ -87,14 +88,16 @@ const interval = {
      * @param selector dom选择器,像document.querySelector一样
      * @param waitTime 等待时间 单位: ms
      */
-    async function waitForElement(selector, waitTime = 500) {
+    async function waitForElement(selector, waitTime = 1000, maxCount = 10) {
+        let count = 0;
         return new Promise(resolve => {
             let timeId = setInterval(() => {
                 const element = document.querySelector(selector);
-                if (element) {
+                if (element || count >= maxCount) {
                     clearInterval(timeId);
-                    resolve(element);
+                    resolve(element || null);
                 }
+                count++;
             }, waitTime);
         });
     }
@@ -105,14 +108,16 @@ const interval = {
      * @param selector dom选择器,像document.querySelectorAll一样
      * @param waitTime 等待时间 单位: ms
      */
-    async function waitForElements(selector, waitTime = 500) {
+    async function waitForElements(selector, waitTime = 1000, maxCount = 10) {
+        let count = 0;
         return new Promise(resolve => {
             let timeId = setInterval(() => {
                 const element = document.querySelectorAll(selector);
-                if (element) {
+                if (element || count >= maxCount) {
                     clearInterval(timeId);
-                    resolve(element);
+                    resolve(element || null);
                 }
+                count++;
             }, waitTime);
         });
     }
@@ -259,7 +264,7 @@ const interval = {
     // 课程首页处理
     async function courseIndex() {
         await new Promise(resolve => {
-            console.log("正在获取加载的课程~");
+            console.log("正在展开所有课程任务");
             let timeId = setInterval(() => {
                 if ($("i.icon.font.font-toggle-all-expanded").length > 0) {
                     clearInterval(timeId);
@@ -272,24 +277,30 @@ const interval = {
                 }
             }, interval.loadCourse);
         });
+
+        console.log("正在获取加载的课程任务");
         const courseElements = await waitForElements('.learning-activity .clickable-area', interval.loadCourse);
 
-
-        for (let i = 0; i < courseElements.length; i++) {
-            const type = $(courseElements[i].querySelector('i.font[original-title]')).attr('original-title'); // 获取该课程任务的类型
-            const status = $(courseElements[i].querySelector('span.item-status')).text(); // 获取该课程任务是否进行中
-            const completes = $(courseElements[i].querySelector('div.completeness[tipsy-literal]')).attr('tipsy-literal').match(/^<b>(\W+)<\/b>/)[1] === "已完成" ? true : false;
-            if (status !== "进行中") {
-                continue;
-            }
+        const courseElement = Array.from(courseElements).find(elem => {
+            const type = $(elem.querySelector('i.font[original-title]')).attr('original-title'); // 获取该课程任务的类型
+            const status = $(elem.querySelector('span.item-status')).text(); // 获取该课程任务是否进行中
+            const completes = $(elem.querySelector('div.completeness[tipsy-literal]')).attr('tipsy-literal').match(/^<b>(\W+)<\/b>/)[1] === "已完成" ? true : false;
             const typeEum = getTypeEum(type);
-            if (!(completes) && typeEum != null) {
-                console.log("发现未完成的课程~");
+
+            const result = status === "进行中" && typeEum != null && completes === false;
+            if (result) {
                 GM_setValue(`typeEum-${courseId}`, typeEum);
-                $(courseElements[i]).click();
-                reutrn;
             }
+            return result;
+        });
+
+        if (courseElement) {
+            console.log("发现未完成的课程");
+            $(courseElement).click();
+        } else {
+            console.log("课程可能全部完成了");
         }
+
     }
 
     function main() {
