@@ -1,8 +1,8 @@
 <!--
  * @Author: 白羽
  * @Date: 2023-04-21 14:32:53
- * @LastEditors: error: git config user.name & please set dead value or install git
- * @LastEditTime: 2023-04-30 12:00:03
+ * @LastEditors: 白羽
+ * @LastEditTime: 2023-05-31 16:36:15
  * @FilePath: \lmsTech\README.md
  * @Description: 
 -->
@@ -11,6 +11,8 @@
 国开（国家开放大学）自动刷课（不答题考试） 支持自动访问线上链接、查看资料附件、观看视频、自动查看页面、自动参与发帖回帖。
 
 **如果你喜欢这个项目，去GitHub给我点个**[star](https://github.com/1665169869/lmsTech)
+
+**或者不妨请我[喝杯咖啡](#请喝咖啡)？**
 
 ## 功能列表
 
@@ -69,3 +71,10 @@
 我没做答题部分的代码，因为我没相对应的题库
 
 如果你使用了这个脚本进行二次开发，请使用相同的协议进行开源。
+
+### 请喝咖啡
+
+**如果你觉得该项目帮到了你，不妨打赏一下作者喝杯水**
+
+![支付宝](https://scriptcat.org/api/v2/resource/image/defQHUibBxVdi4Dh)
+![微信](https://scriptcat.org/api/v2/resource/image/vXBuy3dpHLmw1xAt)
