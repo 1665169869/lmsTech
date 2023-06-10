@@ -1,11 +1,11 @@
 // ==UserScript==
 // @name             调用国开API自动刷课（不答题考试）
 // @namespace        http://ibaiyu.top/
-// @version          1.2.3
+// @version          1.3.0
 // @description      调用国开API自动刷课（不答题考试） 支持自动访问线上链接、查看资料附件、观看视频、自动查看页面、自动参与发帖回帖。调用API接口实现！
 // @author           蜜桃加乌龙
 // @icon             data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAC91BMVEUAAADVHiPaHx3YHyDYHx7YHyDXHx7ZHyHbHyHeIBvfITjaHyDaHyHZHyDZHyDaHyDZHx3NHADaHyDaHx7kIi/aHyDbHyHZHyDYHyDZHx7YHyHaHyDXHx7aHyDaHyDYHyLrIiTRHRjYHx7aHyHaHyHXHyH/JgDWHiHYHyHZHyDNHSrXHyDaHyHZHyHSHh3YIUL/JgDYHyDYHyDYHyDYHyDYHyHaHyHVHiDfICTNHSraHyDdICDXHyDaHyLZHyDaHyDZHyHXHyDVHiDZHx3WHhnFHC/YHyDZHyHYHxjbHx7aHx7ZHyDZHyDVHiPZHyDVHiT/JgDaHxHZHyDZHyDaHyHaHyDVHhW7GADYHyDWHyrYHyDaHyDaHx7ZHyHYHyDXHyDZHyDYHyDVHiPiIBjYHyzYHyHWHh7YHxvYHyGUEQDZHyHYHyHVHh3YHyHYHx7XHh3YHhPaHxndICfZHyDaHyDXHyEAAADYHx7cHx3YHyD/JgDFGgDXHyDYHyDbICTZHyDXHyDYHx7XHyDXHx7fIBnYHx7aHyDYHyTaHx3XHyDYHyDYHyDVHiPaHx7ZHxvZHyDZHyDWHh7WHh3aHx7aHyHZHyDNIFHoIirTHiTZHx7XHyDcHx3YHyDYHx7ZHyDYHyHYHyDXHyDfICHYHx7YHx7ZHyLbHyHYHyHYHyHaHyDVHiDVHhvZHyDZHyDXHx7bHyDZHyDcICHYHx7XHx7aHyDaHx7YHx7bHyDaHyHVHiHcHx3ZHx7ZHyDXHyHaHx7ZHx7aHyDUHh7ZHx7aHyDYHyHWHhnYHx7YHyHVHhvYHyDcICDaHyHcICHYHyHbHyDaHyHZHx7XHx7aHyHXHyDZHyDZHyDbHx7VHh7aHyDXHyHWHh7aHyDaHyDYHyDZHyDaHyHYHx7aHyDaHyHYHyDYHyDZHyDZHx7aHyDXHh3hISLVHh3bHx3XHyHYHyHbHyDcICHaHyDdICHeICHYHyDZHyDhISHkISLgICHfICHjISLbHyHiISH////ipcfUAAAA7nRSTlMAHE6Xvsm8i0YXBlOy6+erTATDPweH+ffXsp+bp8vifQkNqdyBMQEdZFEIq/qJFgUEh9Tj+/DsURIQPv23L9PYV7BHODAHwu8ZcxUpUkxHJQIQcKzwfA4DnBjuyTVN5M/FqxMNDwo/Ix4Cdr4h3H5YDyURj91FAfsseQMH2dUbmV1qrcYM5uE3beOvkCZJLvj7NVfAWEgECAnVegvN0Ziq08DeiItC9uR48jQu9mZs/fH3VZ7kIF/o408h57snleWNIFb8rhhzRhdy/ccybffviUnZrGU9Kyo0WWmG6P795JIfa7n5+b5yIhNMV08U6fjR/AAAAAFiS0dE/DwOo38AAAAHdElNRQfnARUIMQfLGMwuAAACTUlEQVQ4y2NgQABGJmYWVjZ2Dk4GbICLm4f33fsPHz58/MDHLyCIIc8h9O7Th89A8OXdp6/fvgsJo0qLiIp9BMl+/vBJXEJSSlpGVk5eAUleUekHRPcnZRVVsISauoamFsJ67a8g2S/vdHT1ELr0DeBMQyPjj5/fmZiamSNba2EJY1lZ29jafbV3cHRCcZezC5Th6vbD3YPR08vbhwE78P3w4YcfkPYPQJMIDFIH08E/Q0LDgO4OR9dpEaEKoiKjomMY8IHY93HxCYlJ4cmYUilcqUAy4v2HXx9/pKVnYMhnZmXnAKlcUBj+yMsv8CpEU1BUXFJaxsBQDgrjd0YRDBWVSJJJVQwM1RYumUBmDTgWPrExpNfWIRRY1Xs1NEKYTe9ACt43q7W0yiBCIqm17XM7hNkBjucPnRYMXb+7U+Eqenr91CCsvv4voKicMJFh0sePk/1cgUJapVOmZjBMC5sOVjBjJtiOT7MYZs/5+P7zXJl58xd8fv9poVfzosUQM5b8ACn4JZHKsHTZhy/vP/349OvL5w/LV/xYuQpix+o1YH98XMvAsG79r89QYLJh4yaYezaDjfiwZSsDw7btkLT3+cOPHTvhDt61G+KKPS0MDHv38X348ePHh/0HDiIF26HDkMA6AkpkR/0ajzUeP4Ea6idPQVScPoMrzs+eew926PkLW2FC+qgqLl4Cu+7DD97LV65eu37j5q2taGbo3b7z6eMHYAB8+vHu7r37D3IwrXn46PH+J79+fHza+uz5CxxOeWn76vUb1bcoYgCeKT7ATWdIygAAACV0RVh0ZGF0ZTpjcmVhdGUAMjAyMy0wMS0yMVQwODo0OTowNyswMDowMEs6/xcAAAAldEVYdGRhdGU6bW9kaWZ5ADIwMjMtMDEtMjFUMDg6NDk6MDcrMDA6MDA6Z0erAAAAAElFTkSuQmCC
-// @match          *://lms.ouchn.cn/course/*
+// @match            *://lms.ouchn.cn/course/*
 // @license          GPL-3.0
 // @source           https://scriptcat.org/script-show-page/986/
 // @original-author  蜜桃加乌龙
@@ -15,6 +15,7 @@
 // @note             1.2.1：脚本无任何更新，主要是为了更新版本号
 // @note             1.2.2：修复无法使用的BUG
 // @note             1.2.3：修复发帖功能无法使用的BUG
+// @note             1.3.0: 本次更新将会调用学习分析的API请求 这回在学习分析也可以看到学习记录啦!!
 // ==/UserScript==
 function LogHelper() {
     if (document.querySelector('container-element') == null) $('.wrapper').append(this.el_text);
@@ -282,6 +283,8 @@ LogHelper.prototype = {
 
 };
 
+const wait = async (sleep) => new Promise(resolve => setTimeout(resolve, sleep));
+
 
 (function () {
     const Log = new LogHelper();
@@ -299,6 +302,116 @@ LogHelper.prototype = {
         "course_invite": "課程邀請",
         "scorm": "SCORM"
     };
+    /**
+     * 该函数用于添加学习行为时长
+     * 直接返回一个定时器
+     */
+    const globalData = {
+        "course": {
+            "id": 53636,
+            "name": "汽车装饰与美容",
+            "orgId": 8,
+            "orgName": "广州开放大学",
+            "orgCode": "441",
+            "courseCode": "202303-50596441",
+            "endDate": "None",
+            "enableFaceService": "",
+            "isSimulatingInstructor": false,
+            "isInstructorView": false,
+            "isMaster": false
+        },
+        "user": {
+            "id": 1996816,
+            "name": "肖秉越",
+            "userNo": "2244106453851",
+            "orgId": 8,
+            "mobile": "13411110761",
+            "orgName": "广州开放大学",
+            "orgCode": "441",
+            "isCourseAdmin": false
+        },
+        "dept": {
+            "id": "1920",
+            "name": "工贸技师分校",
+            "code": "4417201"
+        },
+        "isOpenUniversity": true,
+        "courseRoles": [
+            "student"
+        ],
+        "deliveryOrg": "ouchn",
+        "useSinglePage": true,
+        "expandActivityInfo": false
+    }
+    function addLearningBehavior(activity_id, activity_type) {
+        const duration = Math.ceil(Math.random() * 300 + 40);
+        const data = JSON.stringify({
+            activity_id,
+            activity_type,
+            browser: 'chrome',
+            course_id: globalData.course.id,
+            course_code: globalData.course.courseCode,
+            course_name: globalData.course.name,
+            org_id: globalData.course.orgId,
+            org_name: globalData.user.orgName,
+            org_code: globalData.user.orgCode,
+            dep_id: globalData.dept.id,
+            dep_name: globalData.dept.name,
+            dep_code: globalData.dept.code,
+            user_agent: window.navigator.userAgent,
+            user_id: globalData.user.id,
+            user_name: globalData.user.name,
+            user_no: globalData.user.userNo,
+            visit_duration: duration
+        });
+        const url = 'https://lms.ouchn.cn/statistics/api/user-visits';
+        return new Promise((resolve, reject) => {
+            $.ajax({
+                url,
+                data,
+                type: "POST",
+                cache: false,
+                contentType: "text/plain;charset=UTF-8",
+                complete: resolve
+            });
+        });
+    }
+    function addVideoLearningRecords({ start_at, end_at, syllabus_id, activity_id, upload_id }) {
+        const url = "https://lms.ouchn.cn/statistics/api/online-videos";
+        const duration = Math.ceil(Math.random() * 300 + 40);
+        const data = JSON.stringify({
+            syllabus_id,
+            activity_id,
+            upload_id,
+            start_at,
+            end_at,
+            duration,
+            "user_id": globalData.user.id,
+            "org_id": globalData.user.orgId,
+            "course_id": globalData.course.id,
+            "is_teacher": false,
+            "is_student": true,
+            "ts": Date.now(),
+            "user_agent": window.navigator.userAgent,
+            "meeting_type": "online_video",
+            "org_name": globalData.user.orgName,
+            "org_code": globalData.course.orgCode,
+            "user_no": globalData.user.userNo,
+            "user_name": globalData.user.name,
+            "course_code": globalData.course.courseCode,
+            "course_name": globalData.course.name,
+        });
+        return new Promise((resolve, reject) => {
+            $.ajax({
+                url,
+                data,
+                type: "POST",
+                cache: false,
+                contentType: "text/plain;charset=UTF-8",
+                complete: resolve
+            });
+        });
+    }
     async function LearnCourseId(courseId) {
         Log.WriteHtmlLine("===== 初始化中 =====", true, { borderBottom: true });
         const getCriterion = completion_criterion => completion_criterion == undefined || completion_criterion == "" ? "无" : completion_criterion;
@@ -318,7 +431,15 @@ LogHelper.prototype = {
             const { learning_activities: LearnActivitieModels } = LearnActivitieData;
             try {
                 for (let LearnActivitieModel of LearnActivitieModels) {
-                    const { completion_criterion, type, title, id, uploads } = LearnActivitieModel;
+                    const {
+                        completion_criterion,
+                        type,
+                        title,
+                        id, // activity_id
+                        uploads, // uploads[x].id
+                        syllabus_id,
+
+                    } = LearnActivitieModel;
                     if (CompletedCourseModels.indexOf(parseInt(id)) !== -1) {
                         Log.WriteHtmlLine(`课程模块：${CoursesModulesModel.name} 模块标题：${title}(${notificationTypesAndText[type]}) 完成标准：${getCriterion(completion_criterion)}(${id}) <span class="info">已完成 跳过</span>`, false, { borderBottom: true });
                         continue;
@@ -326,6 +447,8 @@ LogHelper.prototype = {
                         await new Promise(resolve => setTimeout(resolve, sleep));
                         Log.WriteHtmlLine(`课程模块：${CoursesModulesModel.name} 模块标题：${title}(${notificationTypesAndText[type]}) 完成标准：${getCriterion(completion_criterion)}(${id}) 任务开始`, false, { borderBottom: true });
                     }
+                    await wait(sleep);
+                    await addLearningBehavior(id, type);
                     switch (type) {
                         case "page":
                             await new Promise(resolve => $.post(`https://lms.ouchn.cn/api/course/activities-read/${id}`, {}, resolve));
@@ -335,6 +458,13 @@ LogHelper.prototype = {
                             for (let VideoUploadModel of uploads) {
                                 await new Promise(resolve => $.post(`https://lms.ouchn.cn/api/course/activities-read/${id}`, {}, resolve)); // 第一次的请求默认为没有参数。
                                 for (let item of VideoUploadModel.videos) {
+                                    await addVideoLearningRecords({
+                                        syllabus_id,
+                                        activity_id: id,
+                                        upload_id: VideoUploadModel.id,
+                                        start_at: 0,
+                                        end_at: item.duration,
+                                    });
                                     await new Promise(resolve => setTimeout(resolve, sleep));
                                     await new Promise(resolve => $.ajax({
                                         type: "POST",
