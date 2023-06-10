@@ -10,6 +10,7 @@
 // @note             1.5.8： 修复了发帖会提示内容重复的问题（解决办法：添加unix时间戳）
 // @note             1.5.9： 修复了如果课程有直播课并且已结束的前提下会异常的BUG
 // @note             1.5.10：这次会增加学习行为记录了，但视频学习记录好像还是没有增加 待研究
+// @note             1.5.11：修改学习行为记录的API调用函数 这回去除了定时器
 // @author           蜜桃加乌龙
 // @icon             data:image/png;base64,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
 // @match          *://lms.ouchn.cn/course/*
@@ -133,45 +134,39 @@ const interval = {
 
     /**
      * 该函数用于添加学习行为时长
-     * 直接返回一个定时器
      */
-
-    function AddLearningBehavior() {
-        return setInterval(() => {
-            var userVisitHeader = {
-                headers: {
-                    accept: '*/*',
-                    'accept-language': 'zh-CN,zh;q=0.9,en;q=0.8',
-                    'cache-control': 'no-cache',
-                    'content-type': 'application/json',
-                    pragma: 'no-cache',
-                    'sec-ch-ua': '" Not A;Brand";v="99", "Chromium";v="102", "Google Chrome";v="102"',
-                    'sec-ch-ua-mobile': '?0',
-                    'sec-ch-ua-platform': '"Windows"',
-                    'sec-fetch-dest': 'empty',
-                    'sec-fetch-mode': 'cors',
-                    'sec-fetch-site': 'same-origin',
-                    'x-requested-with': 'XMLHttpRequest',
-                },
-                body: '{}',
-                method: 'POST'
-            };
-            var duration = Math.ceil(Math.random() * 100 + 40);
-            var userVisitBody = {
-                browser: 'chrome',
-                course_id: globalData.course.id,
-                org_id: globalData.course.orgId,
-                user_agent: window.navigator.userAgent,
-                user_id: globalData.user.id,
-                user_name: globalData.user.name,
-                user_no: globalData.user.userNo,
-                visit_duration: duration
-            };
-            userVisitHeader.body = JSON.stringify(userVisitBody);
-            userVisitHeader.method = 'POST';
-            fetch('https://lms.ouchn.cn/statistics/api/user-visits', userVisitHeader);
-            console.log('增加课程访问时长' + duration + '秒');
-        }, interval.other);
+    function addLearningBehavior(activity_id, activity_type) {
+        const duration = Math.ceil(Math.random() * 300 + 40);
+        const data = JSON.stringify({
+            activity_id,
+            activity_type,
+            browser: 'chrome',
+            course_id: globalData.course.id,
+            course_code: globalData.course.courseCode,
+            course_name: globalData.course.name,
+            org_id: globalData.course.orgId,
+            org_name: globalData.user.orgName,
+            org_code: globalData.user.orgCode,
+            dep_id: globalData.dept.id,
+            dep_name: globalData.dept.name,
+            dep_code: globalData.dept.code,
+            user_agent: window.navigator.userAgent,
+            user_id: globalData.user.id,
+            user_name: globalData.user.name,
+            user_no: globalData.user.userNo,
+            visit_duration: duration
+        });
+        const url = 'https://lms.ouchn.cn/statistics/api/user-visits';
+        return new Promise((resolve, reject) => {
+            $.ajax({
+                url,
+                data,
+                type: "POST",
+                cache: false,
+                contentType: "text/plain;charset=UTF-8",
+                complete: resolve
+            });
+        });
     }
 
     // 打开并播放在线视频课程。
@@ -359,10 +354,11 @@ const interval = {
         if (/https:\/\/lms.ouchn.cn\/course\/\d+\/ng.*#\//m.test(document.URL)) {
             // 判断是否在课程首页
             courseIndex();
-        } else if (/https:\/\/lms.ouchn.cn\/course\/\d+\/learning-activity\/full-screen#\/\d+/m.test(document.URL)) {
-            AddLearningBehavior();
+        } else if (/http[s]?:\/\/lms.ouchn.cn\/course\/\d+\/learning-activity\/full-screen[#]?\//.test(window.location.href)) {
             let timeId = 0;
+            const activity_id = /http[s]?:\/\/lms.ouchn.cn\/course\/\d+\/learning-activity\/full-screen[#]?\/(\d+)/.exec(window.location.href)[1];
             const typeEum = GM_getValue(`typeEum-${courseId}`, null);
+            addLearningBehavior(activity_id, typeEum);
             switch (typeEum) {
                 case "page":
                     console.log("正在查看页面。");
