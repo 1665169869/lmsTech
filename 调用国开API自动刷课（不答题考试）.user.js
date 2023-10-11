@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name             调用国开API自动刷课（不答题考试）
 // @namespace        http://ibaiyu.top/
-// @version          1.3.3
+// @version          1.3.4
 // @description      调用国开API自动刷课（不答题考试） 支持自动访问线上链接、查看资料附件、观看视频、自动查看页面、自动参与发帖回帖。调用API接口实现！
 // @author           蜜桃加乌龙
 // @icon             data:image/png;base64,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
@@ -19,6 +19,7 @@
 // @note             1.3.1: 更新版本号
 // @note             1.3.2: 更新控制台输出颜色
 // @note             1.3.3: 更新控制台输出背景颜色
+// @note             1.3.4: 优化部分速度和代码
 // ==/UserScript==
 function LogHelper() {
     if (document.querySelector('container-element') == null) $('.wrapper').append(this.el_text);
@@ -266,7 +267,6 @@ LogHelper.prototype = {
         const el = document.createElement('div');
         container = document.querySelector('container-element');
         el.classList.add('item');
-        el.innerHTML = htmlContent;
         if (alignCenter) {
             el.style.textAlign = "center";
         };
@@ -278,18 +278,21 @@ LogHelper.prototype = {
         }
         const body = container.querySelector('.body');
         const logEl = container.querySelector('.console');
-        body.scrollTop = body.scrollHeight;
         logEl.appendChild(el);
+        body.scrollTop = body.scrollHeight;
         logEl.scrollTop = logEl.scrollHeight;
 
         const result = [...htmlContent.matchAll(/<span class=\"(.+)\">(.+)<\/span>/g)][0];
-        
+
         if (result === undefined) {
-            console.log(htmlContent);
+            console.log("\n" + htmlContent);
             return;
         }
+        htmlContent = htmlContent.replace(/<span class=\"(.+)\">(.+)<\/span>/g, `<br> <span class="${result[1]}">${result[2]}</span>`);
+        el.innerHTML = htmlContent;
 
-        htmlContent = htmlContent.replace(/<span class=\"(.+)\">(.+)<\/span>/g, "%c" + result[2]);
+        htmlContent = htmlContent.replace(/<span class=\"(.+)\">(.+)<\/span>/gm, "%c" + result[2])
+        htmlContent = htmlContent.replace(/<br>/gm, "\n");
         let color = "#757575";
         switch (result[1]) {
             case "info":
@@ -307,7 +310,9 @@ LogHelper.prototype = {
             case "log":
                 color = "#9e9e9ec4";
         }
-        console.log(htmlContent, `color: #fff; background: ${color}; padding: 3px 2px; border-radius: 3px;`);
+        
+       
+        console.log("\n" + htmlContent, `color: #fff; background: ${color}; padding: 3px 2px; border-radius: 3px;`);
     }
 
 };
@@ -452,8 +457,8 @@ const wait = async (sleep) => new Promise(resolve => setTimeout(resolve, sleep))
         const CompletedCourseData = StartCompletenessData;
         const CompletedCourseModels = CompletedCourseData.completed_result.completed.learning_activity;
         for (let CoursesModulesModel of CoursesModulesModels) {
-            let sleep = parseInt((Math.random() * (15 - 8) + 8) * 1000); // 取8000 - 15000之间的毫秒随机数
-            await new Promise(resolve => setTimeout(resolve, sleep));
+            let sleep = parseInt((Math.random() * (13 - 8) + 8) * 1000); // 取8000 - 13000之间的毫秒随机数
+            await wait(sleep);
             Log.WriteHtmlLine(`课程模块：${CoursesModulesModel.name}(${CoursesModulesModel.id}) 当前进度${StrartCompleteness}% 随机延迟: <span class="time">${sleep}毫秒</span>`, true, { borderBottom: true });
             // 日志输出
             const LearnActivitieData = await new Promise(resolve => $.get(`https://lms.ouchn.cn/api/course/${courseId}/all-activities?module_ids=[${CoursesModulesModel.id}]&activity_types=learning_activities,exams,classrooms`, (data, status, xhr) => status === "success" ? resolve(data) : { learning_activities: [] }));
@@ -473,10 +478,15 @@ const wait = async (sleep) => new Promise(resolve => setTimeout(resolve, sleep))
                         Log.WriteHtmlLine(`课程模块：${CoursesModulesModel.name} 模块标题：${title}(${notificationTypesAndText[type]}) 完成标准：${getCriterion(completion_criterion)}(${id}) <span class="info">已完成 跳过</span>`, false, { borderBottom: true });
                         continue;
                     } else {
-                        await new Promise(resolve => setTimeout(resolve, sleep));
                         Log.WriteHtmlLine(`课程模块：${CoursesModulesModel.name} 模块标题：${title}(${notificationTypesAndText[type]}) 完成标准：${getCriterion(completion_criterion)}(${id}) <span class="log">任务开始</span>`, false, { borderBottom: true });
                     }
-                    await wait(sleep);
+
+                    if (type === "online_video") {
+                        await wait(sleep);
+                    } else {
+                        await wait(3000);
+                    }
+
                     await addLearningBehavior(id, type);
                     switch (type) {
                         case "page":
