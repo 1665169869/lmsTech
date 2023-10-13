@@ -75,7 +75,7 @@ async function LearnCourseId(courseId) {
             break;
           case "online_video":
             for (const VideoUploadModel of uploads) {
-              for (const item of VideoUploadModel) {
+              for (const item of VideoUploadModel.videos) {
                 await Promise.all([
                   APIs.postActivitiesRead(id),
                   APIs.addVideoLearningRecords({
