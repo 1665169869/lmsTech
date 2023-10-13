@@ -1,0 +1,27 @@
+{
+  "name": "lms_tech",
+  "version": "1.0.0",
+  "description": "调用国开API自动刷课（不答题考试） 支持自动访问线上链接、查看资料附件、观看视频、自动查看页面、自动参与发帖回帖。调用API接口实现！",
+  "main": "test.js",
+  "scripts": {
+    "build": "webpack --mode production",
+    "dev": "webpack --mode development"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/1665169869/lmsTech.git"
+  },
+  "author": "i白羽 (蜜桃加乌龙)",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/1665169869/lmsTech/issues"
+  },
+  "homepage": "https://github.com/1665169869/lmsTech#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "jquery": "^3.7.1",
+    "scriptcat-webpack-plugin": "^1.3.2",
+    "webpack": "^5.88.2",
+    "webpack-cli": "^5.1.4"
+  }
+}

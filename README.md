@@ -32,6 +32,13 @@
 
 [greasyfork](https://greasyfork.org/zh-CN/scripts/464459-%E5%9B%BD%E5%BC%80%E8%87%AA%E5%8A%A8%E5%88%B7%E8%AF%BE-%E4%B8%8D%E7%AD%94%E9%A2%98%E8%80%83%E8%AF%95)
 
+#### 已知bug
+
+目前发帖任务完成了也会显示部分完成 这个并不是脚本的bug
+
+纯属国开完成了任务没算你完成。
+
+
 ### 全自动 （直接调用API进行刷课）
 
 *参考了一个GitHub项目 [点我跳转](https://github.com/windfgg/TestPuppeteerSharp)*
