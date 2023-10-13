@@ -1,5 +1,32 @@
 export function LogHelper() {
-    if (document.querySelector('container-element') == null) $('.wrapper').append(this.el_text);
+    if (document.querySelector('container-element') == null) {
+        $('.wrapper').append(this.el_text);
+        const odiv = document.querySelector("container-element");
+
+        //给需要移动的元素添加onmousedown事件
+        odiv.onmousedown = function (ev) {
+            let event = window.event || ev;
+            // 获取屏幕中可视化的宽高的坐标
+            let dx = event.clientX - odiv.offsetLeft;
+            let dy = event.clientY - odiv.offsetTop;
+            console.log(event);
+            console.log(dy)
+            //实时改变目标元素odiv的位置
+            document.onmousemove = function (ev) {
+                let event = window.event || ev;
+                odiv.style.left = event.clientX - dx + 'px';
+                odiv.style.top = event.clientY - dy + 'px';
+            }
+
+            //抬起停止拖动
+            document.onmouseup = function () {
+                document.onmousemove = null;
+                document.onmouseup = null;
+
+            }
+        }
+
+    };
 }
 LogHelper.prototype = {
     constructor: LogHelper,

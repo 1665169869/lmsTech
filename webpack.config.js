@@ -26,7 +26,8 @@ const scriptConfigs = {
     "1.3.3: 更新控制台输出背景颜色",
     "1.3.4: 优化部分速度和代码",
     "202310132049: 优化代码，几乎等于重构一次 使用webpack打包，修复部分bug",
-    "20231013219: 修复刷视频的时候VideoUploadModel没有正确循环VideoUploadModel.videos的问题"
+    "20231013219: 修复刷视频的时候VideoUploadModel没有正确循环VideoUploadModel.videos的问题",
+    "202310132115: 现在整个窗口已经可以用鼠标拖动了"
   ]
 }
 
